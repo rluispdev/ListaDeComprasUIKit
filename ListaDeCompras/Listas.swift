@@ -25,13 +25,21 @@ class List: UIViewController {
             NSLog("V1 é mmaior que v3 %i",   v1)
         }
         
-        let array = ["a", "b", "c"]
-        for i in array {
-            print(i)
-        }
+     
+        let altura = carregarDicionario(medida: "peso")
+        print(altura)
         
-        for i in 0..<v2 {
-            print(i)
-        }
+    }
+    var array1 = NSMutableArray()
+    
+   
+    func carregarDicionario(medida chave: String ) -> Float {
+        var dic1 = NSMutableDictionary()
+        dic1 = [ "nome" : "Davi", "idade": 12, "medidas" :["medidas" : 1.75, "peso": 67]]
+        let nome = dic1["nome"] as? String
+        let medidas = dic1 ["medidas"] as? NSDictionary
+        let altura = medidas? [chave] as? Float ?? 0
+        return altura
+        
     }
 }
