@@ -9,8 +9,9 @@ import Foundation
 import UIKit
 
 //Delegate UIViewControler
-class List: UIViewController {
+class List: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var alturaLabel: UILabel!
+    @IBOutlet weak var auturaText: UITextField!
     @IBOutlet weak var imageIcon: UIImageView!
     var v1 = 3
     var v2 = 5
@@ -18,6 +19,7 @@ class List: UIViewController {
     var string = "Hello!"
     
     override func viewDidLoad() {
+        auturaText.delegate = self
         v1 = v2 + v1
         print(v1)
         //Fazer Debugger
@@ -34,8 +36,28 @@ class List: UIViewController {
         
         var array1 = NSMutableArray()
     }
+    //Delegates
+    override func viewWillAppear(_ animated: Bool) {
+        alturaLabel.textColor = UIColor.red
+        alturaLabel.text = "Altura (cm)"
+    }
+    override func viewDidAppear(_ animated: Bool) {
+         
+    }
    
+    override func viewWillDisappear(_ animated: Bool) {
+         
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+ 
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        auturaText.resignFirstResponder()
+    }
     @IBAction func enviar(_ sender: Any) {
+        alturaLabel.textColor = .black
     }
     
 }
