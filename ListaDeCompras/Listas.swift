@@ -10,6 +10,8 @@ import UIKit
 
 //Delegate UIViewControler
 class List: UIViewController {
+    @IBOutlet weak var alturaLabel: UILabel!
+    @IBOutlet weak var imageIcon: UIImageView!
     var v1 = 3
     var v2 = 5
     let v3 = 7
@@ -33,6 +35,8 @@ class List: UIViewController {
         var array1 = NSMutableArray()
     }
    
+    @IBAction func enviar(_ sender: Any) {
+    }
     
 }
 
