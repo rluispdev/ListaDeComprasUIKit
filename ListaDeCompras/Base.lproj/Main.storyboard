@@ -17,36 +17,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Altura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTW-Gc-Km7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Altura" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dTW-Gc-Km7">
                                 <rect key="frame" x="56" y="131" width="289" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWB-nU-SgB">
-                                <rect key="frame" x="48" y="216" width="297" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XWB-nU-SgB">
+                                <rect key="frame" x="32" y="214" width="329" height="35"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="KZs-Nq-Sri"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Enviar"/>
                                 <connections>
                                     <action selector="enviar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FcV-E4-tyf"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rgv-f6-88l" userLabel="Altura Text">
-                                <rect key="frame" x="48" y="160" width="297" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PZ4-Od-dvz">
+                                <rect key="frame" x="52.666666666666657" y="288" width="288" height="157"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <color key="tintColor" systemColor="systemTealColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="288" id="Dp7-aw-aCD"/>
+                                    <constraint firstAttribute="height" constant="157" id="qCu-bu-8Os"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rgv-f6-88l" userLabel="Altura Text">
+                                <rect key="frame" x="32" y="160" width="329" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PZ4-Od-dvz">
-                                <rect key="frame" x="48" y="288" width="288" height="157"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="XWB-nU-SgB" firstAttribute="trailing" secondItem="Rgv-f6-88l" secondAttribute="trailing" id="0Oh-6r-p14"/>
+                            <constraint firstItem="PZ4-Od-dvz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="29S-65-X5i"/>
+                            <constraint firstItem="XWB-nU-SgB" firstAttribute="top" secondItem="Rgv-f6-88l" secondAttribute="bottom" constant="20" id="7Rh-bb-BJX"/>
+                            <constraint firstItem="dTW-Gc-Km7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="JxQ-Cr-YtJ"/>
+                            <constraint firstItem="PZ4-Od-dvz" firstAttribute="top" secondItem="XWB-nU-SgB" secondAttribute="bottom" constant="39" id="RGj-82-3wp"/>
+                            <constraint firstItem="dTW-Gc-Km7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="Wko-zA-Rod"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dTW-Gc-Km7" secondAttribute="trailing" constant="32" id="Z4F-pk-aXg"/>
+                            <constraint firstItem="Rgv-f6-88l" firstAttribute="trailing" secondItem="dTW-Gc-Km7" secondAttribute="trailing" id="fS0-IZ-KrL"/>
+                            <constraint firstItem="XWB-nU-SgB" firstAttribute="leading" secondItem="Rgv-f6-88l" secondAttribute="leading" id="kUo-Om-sxz"/>
+                            <constraint firstItem="Rgv-f6-88l" firstAttribute="top" secondItem="dTW-Gc-Km7" secondAttribute="bottom" constant="8" symbolic="YES" id="nc0-Jp-Iei"/>
+                            <constraint firstItem="Rgv-f6-88l" firstAttribute="leading" secondItem="dTW-Gc-Km7" secondAttribute="leading" id="ts1-Rh-SRz"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="alturaLabel" destination="dTW-Gc-Km7" id="z63-iw-plB"/>
@@ -63,8 +81,14 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529410000001" green="0.69019607839999997" blue="0.78039215689999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
