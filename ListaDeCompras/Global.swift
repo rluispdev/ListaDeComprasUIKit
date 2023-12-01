@@ -9,7 +9,8 @@ import Foundation
 
 class Global {
     
-   public func carregarDicionario(medida chave: String ) -> Float {
+  
+    public func carregarDicionario(medida chave: String ) -> Float {
         var dic1 = NSMutableDictionary()
         dic1 = [ "nome" : "Davi", "idade": 12, "medidas" :["medidas" : 1.75, "peso": 67]]
         let nome = dic1["nome"] as? String
